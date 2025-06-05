@@ -32,7 +32,4 @@ nx.is_eulerian(self._graph) # Ritorna True se il grafo è euleriano
 nx.hamiltonian_path(self._graph)
 
 # Algoritmo di Christofides (alternativa al comando hamiltonian_path)
-nx.christofides(self._graph,weight = "weight")
-
-
-
+nx.christofides(self._graph, weight = "weight")

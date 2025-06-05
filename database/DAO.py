@@ -1,4 +1,5 @@
 from database.DB_connect import DBConnect
+from model.data_transfer_object import DTO_name
 
 class DAO():
     @staticmethod
@@ -14,7 +15,7 @@ class DAO():
         cursor.execute(query)
 
         for row in cursor:
-            result.append(row) # tip: salvare il risultato di ogni query in una lista di DTO
+            result.append(DTO_name(**row)) # tip: salvare il risultato di ogni query in una lista di DTO
 
         cursor.close()
         conn.close()

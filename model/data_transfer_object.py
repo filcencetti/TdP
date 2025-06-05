@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 # Data Transfer Object (DTO)
 @dataclass
-class class_name:
+class DTO_name:
     istanza1 : int # chiave primaria dell'oggetto
     istanza2 : str
     istanza3 : float
