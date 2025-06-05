@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+# Data Transfer Object (DTO)
 @dataclass
 class class_name:
     istanza1 : int # chiave primaria dell'oggetto

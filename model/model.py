@@ -33,14 +33,16 @@ class Model:
         return
 
     def recursive(self, parziale): # tip: usare più funzioni per effettuare le verifiche
+        # operazioni che svolgi sempre
+
         if : # condizione terminale
 
-            if sum > self.best_sol: # cerco la soluzione migliore
-                self.best_sol = sum
+            if total > self.best_sol: # cerco la soluzione migliore
+                self.best_sol = total
                 self.best_path = copy.deepcopy(parziale) # necessario per copiare tutti gli oggetti di una lista
 
         # else: non è necessario
         for  in :
             parziale.append(a)
             self.ricorsione(parziale)
-            parziale.pop() # necessario per esplorare tutti i percorsi
+            parziale.pop() # Backtracking, necessario per esplorare tutti i percorsi

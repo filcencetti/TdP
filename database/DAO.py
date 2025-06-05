@@ -14,7 +14,7 @@ class DAO():
         cursor.execute(query)
 
         for row in cursor:
-            result.append(row) # tip: salvare il risultato di ogni query in una lista di DBO
+            result.append(row) # tip: salvare il risultato di ogni query in una lista di DTO
 
         cursor.close()
         conn.close()

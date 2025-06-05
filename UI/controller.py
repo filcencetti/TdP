@@ -9,14 +9,14 @@ class Controller:
 
     def function_name1(self, e): # se è invocata da un bottone, bisogna mettere e
         if txt_in1 == "" or txt_in1 is None: # verifiche sulla correttezza dell'input 1
-            self._view.create_alert(f"")
+            self._view.create_alert(f"Attenzione, inserire un valore!!!")
             self._view.update_alert()
             return
 
         try:
             txt_in_int1 = int(txt_in1)
-        except ValueError:
-            self._view.create_alert(f"")
+        except:
+            self._view.create_alert(f"Attenzione, inserire un valore intero!!!")
             self._view.update_alert()
             return
 
