@@ -14,4 +14,4 @@ class DTO_name:
         return hash(self.istanza1) # definisce la chiave primaria dell'oggetto
 
     def __eq__(self, other):
-        return self.istanza1 == other.istanza1 # confronta la chiave primare tra due oggetti per verificare che siano lo stesso
+        return self.istanza1 == other.istanza1 # confronta la chiave primaria dei due oggetti per verificare che siano lo stesso

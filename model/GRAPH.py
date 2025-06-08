@@ -1,3 +1,5 @@
+import copy
+
 import networkx as nx
 
 ## Creare un grafo
@@ -9,11 +11,15 @@ self._graph[nodo1][nodo2] # restituisce gli attributi dell'arco (es: {"weight":5
 self._graph.nodes() # restituisce una lista di nodi
 self._graph.edges() # restituisce una lista di archi
 
-# Depth First Search
+# Depth First Search --> visita ogni percorso fino in fondo e torna indietro
 nx.dfs_tree(self._graph[])
+nx.dfs_tree(self._graph[],node_source) # restituisce un grafo con tutti i nodi e archi raggiungibili partendo dal node_source
 
-# Breadth First Search
-nx.bfs_tree(self._graph[]) # Grafo non pesato
+# Breadth First Search --> visita i nodi a livelli (per grado)
+nx.bfs_tree(self._graph[]) # GRAFO NON PESATO
+nx.bfs_tree(self._graph[],node_source) # restituisce un grafo con tutti i nodi e archi raggiungibili partendo dal node_source
+
+### DFS e BFS visitano gli stessi nodi ma non gli stessi archi
 
 # Percorso più corto (minimo peso totale) tra due nodi
 nx.shortest_path(self._graph, nodo1, nodo2)
@@ -33,3 +39,15 @@ nx.hamiltonian_path(self._graph)
 
 # Algoritmo di Christofides (alternativa al comando hamiltonian_path)
 nx.christofides(self._graph, weight = "weight")
+
+# Percorso più lungo
+lp = []
+tree = nx.dfs_tree(self._graph, node_source)
+nodes = list(tree.nodes())
+for node in nodes:
+    tmp = [node]
+    while tmp[0] != node_source:
+        pred = nx.predecessor(tree, node_source, tmp[0])
+        tmp.insert(0, pred[0])
+    if len(tmp) > len(lp):
+        lp = copy.deepcopy(tmp)

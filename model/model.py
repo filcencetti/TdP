@@ -43,6 +43,7 @@ class Model:
 
         # else: non è necessario
         for  in :
+            if : # filtro per procedere nella ricerca
             parziale.append(a)
             self.ricorsione(parziale)
             parziale.pop() # Backtracking, necessario per esplorare tutti i percorsi
