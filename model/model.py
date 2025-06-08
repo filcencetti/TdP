@@ -29,10 +29,10 @@ class Model:
         parziale = []
         self.best_prath = []
         self.best_sol = 0
-        self.ricorsione(parziale)
+        self.recursion(parziale)
         return
 
-    def recursive(self, parziale): # tip: usare più funzioni per effettuare le verifiche
+    def recursion(self, parziale): # tip: usare più funzioni per effettuare le verifiche
         # operazioni che svolgi sempre
 
         if : # condizione terminale
