@@ -35,7 +35,7 @@ class Controller:
         # operazioni della funzione 2
 
     def fill_DD(self, myValues):
-        myValuesDD = list(map(lambda i: ft.dropdown.Option(data=i, key=i.istanza1, on_click=self.read_DD_value), myValues)) # map cicla su myValues e applica la funzione lambda
+        myValuesDD = list(map(lambda x: ft.dropdown.Option(data=x, key=x.istanza1, on_click=self.read_DD_value), myValues)) # map cicla su myValues e applica la funzione lambda
         self._view._ddLun.options = myValuesDD
 
     def read_DD_value(self, e): # salva tutto l'oggetto in un'istanza di self

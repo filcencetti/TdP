@@ -22,7 +22,7 @@ class Model:
 
     def buildGraph(self):
         # aggiungo nodi e archi al grafo
-        pass
+        self._graph.clear()
 
     ### RICORSIONE
     def function_for_recursion(self):
