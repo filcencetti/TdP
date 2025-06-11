@@ -29,3 +29,4 @@ def ricorsione(self, parziale):
             self.ricorsione(parziale)
             parziale.pop()
 
+
