@@ -1,4 +1,6 @@
 import copy
+import itertools
+
 import networkx as nx
 
 class Model:
@@ -23,6 +25,12 @@ class Model:
     def buildGraph(self):
         # aggiungo nodi e archi al grafo
         self._graph.clear()
+
+        # Aggiungo un arco per ogni combinazione di nodi
+        myedges = list(itertools.combinations(self.list_with_nodes,
+                                              2))  # restituisce una lista di tuple con tutte le combinazioni dei nodi
+        self._graph.add_edges_from(myedges)
+
 
     ### RICORSIONE
     def function_for_recursion(self):

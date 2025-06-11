@@ -10,6 +10,8 @@ nx.DiGraph() # orientato
 self._graph[nodo1][nodo2] # restituisce gli attributi dell'arco (es: {"weight":5})
 self._graph.nodes() # restituisce una lista di nodi
 self._graph.edges() # restituisce una lista di archi
+self._graph.has_edge(node1,node2) # ritorna True se esiste un arco che collega i due nodi, False altrimenti
+nx.node_connected_component(self._graph, node) # ritorna una lista di utti i nodi raggiungibili da node (solo con archi non orientati)
 
 # Depth First Search --> visita ogni percorso fino in fondo e torna indietro
 nx.dfs_tree(self._graph[])
