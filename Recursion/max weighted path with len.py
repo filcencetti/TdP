@@ -23,7 +23,6 @@ def ricorsione(self, parziale, lun):
             self._bestPath = copy.deepcopy(parziale)
         return
 
-    # se arrivo qui, allora parziale può ancora ammettere altri nodi
     for n in self._graph.neighbors(parziale[-1]):
         if parziale[-0].classification == n.classification and n not in parziale:
             parziale.append(n)

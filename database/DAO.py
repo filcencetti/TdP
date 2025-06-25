@@ -2,6 +2,9 @@ from database.DB_connect import DBConnect
 from model.data_transfer_object import DTO_name
 
 class DAO():
+    def __init__(self):
+        pass
+
     @staticmethod
     def DAOfunction_name1():
         conn = DBConnect.get_connection()
@@ -15,7 +18,7 @@ class DAO():
         cursor.execute(query)
 
         for row in cursor:
-            result.append(DTO_name(**row)) # tip: salvare il risultato di ogni query in una lista di DTO
+            result.append(DTO_name(**row))
 
         cursor.close()
         conn.close()

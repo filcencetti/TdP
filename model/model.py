@@ -5,30 +5,18 @@ import networkx as nx
 
 class Model:
     def __init__(self):
-        # definico tutte le istanze della classe
-        self._idMap = {} # per risalire all'oggetto dal codice
+        self._idMap = {}
         for n in self.list1:
             self._idMap[n.id] = n
 
-        # definisco il grafo
-        self._graph = nx.Graph() # grafo non orientato
-        self._graph = nx.DiGraph() # grafo orientato
 
-    def function_name1(self):
-        # operazioni della prima funzione
-        pass
-
-    def function_name2(self):
-        # operazioni della prima funzione
-        pass
+        self._graph = nx.Graph()
+        self._graph = nx.DiGraph()
 
     def buildGraph(self):
-        # aggiungo nodi e archi al grafo
         self._graph.clear()
 
-        # Aggiungo un arco per ogni combinazione di nodi
-        myedges = list(itertools.combinations(self.list_with_nodes,
-                                              2))  # restituisce una lista di tuple con tutte le combinazioni dei nodi
+        myedges = list(itertools.combinations(self.list_with_nodes,2))
         self._graph.add_edges_from(myedges)
 
 
@@ -40,18 +28,18 @@ class Model:
         self.recursion(parziale)
         return
 
-    def recursion(self, parziale): # tip: usare più funzioni per effettuare le verifiche
-        # operazioni che svolgi sempre
+    def recursion(self, parziale):
 
-        if : # condizione terminale
 
-            if total > self.best_sol: # cerco la soluzione migliore
+        if :
+
+            if total > self.best_sol:
                 self.best_sol = total
-                self.best_path = copy.deepcopy(parziale) # necessario per copiare tutti gli oggetti di una lista
+                self.best_path = copy.deepcopy(parziale)
 
-        # else: non è necessario
+
         for  in :
-            if : # filtro per procedere nella ricerca
+            if :
             parziale.append(a)
             self.ricorsione(parziale)
-            parziale.pop() # Backtracking, necessario per esplorare tutti i percorsi
+            parziale.pop()
